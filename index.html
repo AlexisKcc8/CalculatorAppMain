@@ -9,37 +9,72 @@
 
   	<link rel="stylesheet" type="text/css" href="./css/stylle.css">
 
-    <script type="text/javascript" src="./js/appCal.js"></script>
+    <script defer type="text/javascript" src="./js/appCal.js"></script>
 </head>
 <body>
-
-  <h2>SPLI<br>TTER</h2>
+  <img class="logo" src="./images/logo.svg">
   <main>
+    <div class="Operations">
+      <div class="contentOperations">
+        <div class="Bill">
+          <label for="dateBill">Bill</label><br>
+          <div class="container-inputIcon">
+            <img src="./images/icon-dollar.svg" class="icon-Bill">
+            <input type="text" name="Bill" class="inp-Bill" id="dateBill"/>
+          </div>
+        </div>
     
+        <div class="SelectTip">
+          <p>Select Tip %</p>
+          <div class="SelectTip-gridContainer">
+            <div class="SelectTip-gridContainer__grid-item" id="button-5">5%</div>
+            <div class="SelectTip-gridContainer__grid-item" id="button-10">10%</div>
+            <div class="SelectTip-gridContainer__grid-item" id="button-15">15%</div>
+            <div class="SelectTip-gridContainer__grid-item" id="button-25">25%</div>
+            <div class="SelectTip-gridContainer__grid-item" id="button-50">50%</div>
+            <input class="SelectTip-gridContainer__grid-item" placeholder="Custom" type="text" name="custom" id="custom">
+          </div>
+        </div>
+
+        <div class="NumberPeople">
+          <label for="numberPeople">Number of People</label><br>
+          <div class="container-inputIcon">
+            <img src="./images/icon-person.svg" class="icon-People">
+            <input type="text" name="size" id="numberPeople">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="showResult">
+      <div class="content-amout">
+        <div class="content-amout__texts">
+          <p class="content-amout__title">
+            Tip Amount<br>
+            / person
+          </p>
+        </div>
+        <div class="content-amout__result">
+          $4.27
+        </div>
+      </div>
+      <div class="content-totalPerson">
+        <div class="content-totalPerson__texts">
+          <p class="content-totalPerson__title">
+            Total <br>
+            / person
+          </p>
+        </div>
+        <div class="content-totalPerson__result">
+          $32.27
+        </div>
+      </div>
+      Reset
+    </div>
   </main>
-	Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
+	
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">Kley_Chim</a>.
+  </footer>
 </body>
 </html>
