@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 //Colors
 //Primary
-
 $StrongCyan: hsl(172, 67%, 45%);
-
-//Neutral
-
 $VeryDarkCyan: hsl(183, 100%, 15%);
 $DarkGrayishCyan: hsl(186, 14%, 43%);
 $DarkGrayishCyan2: hsl(184, 14%, 56%);
@@ -15,22 +11,123 @@ $White: hsl(0, 0%, 100%);
 
 
 // USO DE MIXINS EN SASS;
-@mixin caja-flex($mainAxis, $croxAxis, $wrap){
+@mixin caja-flex($mainAxis, $croxAxis, $wrap, $direction){
     display: flex;
     justify-content: $mainAxis;
     align-items: $croxAxis;
     flex-wrap: $wrap;
+	flex-direction: $direction;
 }
-
-body{
-	background-color:$VeryDarkCyan;
+*{
 	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
+}
+body{
+	// background-color:$LightGrayishCyan;
+	background-color:$LightGrayishCyan;
 	font-family: 'Space Mono', monospace;
-	@include caja-flex(center,center,wrap);//PARA LLAMAR AL MIXIN
+	@include caja-flex(center,center,wrap,column);//PARA LLAMAR AL MIXIN
 	min-height: 100vh;
 }
+.logo{
+	margin:3rem 0;
+}
+main{
+	background-color: $White;
+	@include caja-flex(center, center, nowrap,column);
+	width: 100%;
+	padding: 1em 2em;
+	border-radius: 2rem;
+}
+.Operations{
+	background-color:$White;
+	width: 100%;
+	
+	font-weight: 700;
+	color: $DarkGrayishCyan2;
+	.contentOperations{
+		.Bill{
+			padding: 1rem 0;
+		}
+		.SelectTip{
+			margin:2rem 0;
+			&-gridContainer{
+				display:grid;
+				grid-template-columns: 1fr 1fr;
+				justify-items: center;
+				align-items: center;
+				gap:1rem;
+				margin:1rem 0 0 0;
+				&__grid-item{
+					width: 100%;
+					height: 3.5rem;
+					@include caja-flex(center, center, nowrap, row);
+					background-color: $VeryDarkCyan;
+					color:$White;
+					border:none;
+					border-radius: 5px;
+					font-size: 1.6rem;
+					font-weight: 700;
+				}
+				&__grid-item:hover{
+					background-color: $LightGrayishCyan;
+					cursor: pointer;
+					color: $VeryDarkCyan;
+					transition: .3s;
+				}
+				
+			}
+			.btn-active {
+				background-color: $StrongCyan;
+				color: $VeryDarkCyan;
+			}
+		}
+		.NumberPeople{
+			margin: 0 0 1rem 0;
+		}
+	}
+}
+.container-inputIcon{
+	position: relative;
+	margin: .5rem 0;
+	height: 3.5rem;
+}
+.icon-Bill,.icon-People{
+	color: #e8e8e8;
+	font-size: 15px;
+	position: absolute;
+	top: 1.25rem;
+	left: 1.25rem;
+}
+#dateBill, #numberPeople{
+	width: 100%;
+	height: 100%;
+	font-size: 1.5rem;
+	font-weight: 900;
+	padding:1.3rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#dateBill:focus,#numberPeople:focus{
+    box-shadow: 0 0 0 2px $StrongCyan;
+    outline: none;
+    transition: .3s;
+}
 
+#dateBill, #numberPeople,#custom{
+	background-color: $LightGrayishCyan2;
+	border: none;
+	color:$VeryDarkCyan;
+	text-align: right;
+}
+
+.showResult{
+	background-color: $VeryDarkCyan;
+	width: 100%;
+	border-radius: 1rem;
+}
 
 
 

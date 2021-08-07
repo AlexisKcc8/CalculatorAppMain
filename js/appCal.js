@@ -1,15 +1,27 @@
+const tipBtns = document.querySelectorAll('.SelectTip-gridContainer__grid-item');
+const inpBill = document.getElementById('dateBill');
+inpBill.placeholder = "0.0";
 
-// document.write(`ANCHO: ${screen.width}
-// 				ALTO:${screen.height}<br>
-//   `);
+tipBtns.forEach(btn => {
+    btn.addEventListener('click', handleClick);
+});
 
-// if (screen.width <= 375) 
-//    document.write ("Pequeña") 
-// else 
-//    if (screen.width < 790) 
-//       document.write ("Mediana") 
-//    else 
-//       document.write ("Grande")
+function handleClick(event){
+    tipBtns.forEach(btn => {
+        //clear active state
+        btn.classList.remove('btn-active');
+        //set active state 
+        if(event.target.innerHTML == btn.innerHTML){
+            btn.classList.add('btn-active');
+            tipValue = parseFloat(btn.innerHTML)/100;
+            console.log(btn.innerHTML);
+        }
+    });
 
+    //clear custom tip
+    // tipCustom.value = '';
 
+    // calculateTip();
 
+    //console.log(tipValue);
+}
