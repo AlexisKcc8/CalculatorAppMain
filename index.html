@@ -37,7 +37,10 @@
         </div>
 
         <div class="NumberPeople">
-          <label for="numberPeople">Number of People</label><br>
+          <div class="containerLabelNegativeCero">
+            <label for="numberPeople">Number of People</label>
+            <p class="textZero">Can´t be zero</p>
+          </div>
           <div class="container-inputIcon">
             <img src="./images/icon-person.svg" class="icon-People">
             <input type="text" name="size" id="numberPeople">
@@ -50,7 +53,7 @@
         <div class="content-amout__texts">
           <p class="content-amout__title">
             Tip Amount<br>
-            / person
+            <span class="text-person">/ person</span>
           </p>
         </div>
         <div class="content-amout__result">
@@ -61,20 +64,27 @@
         <div class="content-totalPerson__texts">
           <p class="content-totalPerson__title">
             Total <br>
-            / person
+            <span class="text-person">/ person</span>
           </p>
         </div>
         <div class="content-totalPerson__result">
           $32.27
         </div>
       </div>
-      Reset
+      <div class="btn-reset">
+        RESET
+      </div>
     </div>
   </main>
 	
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Kley_Chim</a>.
+  <footer class="footer">
+    <p class="footer__text">
+      Challenge by Frontend Mentor
+      Coded by 
+    </p>
+    <div class="containerFooterImg">
+      <img class="containerFooterImg__img" src="./images/LogoALX-AZUL.png" alt="LogoALX-AZULFUERTE">
+    </div>
   </footer>
 </body>
 </html>

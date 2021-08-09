@@ -28,13 +28,12 @@ main {
   flex-wrap: nowrap;
   flex-direction: column;
   width: 100%;
-  padding: 1em 2em;
+  padding: 1em 1.5em;
   border-radius: 2rem;
 }
 
 .Operations {
   background-color: white;
-  width: 100%;
   font-weight: 700;
   color: #7f9c9f;
 }
@@ -80,6 +79,17 @@ main {
 .Operations .contentOperations .NumberPeople {
   margin: 0 0 1rem 0;
 }
+.Operations .contentOperations .NumberPeople .containerLabelNegativeCero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.Operations .contentOperations .NumberPeople .containerLabelNegativeCero .textZero {
+  color: #b63f3f;
+  display: none;
+}
 
 .container-inputIcon {
   position: relative;
@@ -122,7 +132,80 @@ main {
 .showResult {
   background-color: #00494d;
   width: 100%;
+  height: 18rem;
   border-radius: 1rem;
+  margin: 1.5rem 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.showResult .content-amout,
+.showResult .content-totalPerson {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  height: 6rem;
+}
+.showResult .content-amout__title,
+.showResult .content-totalPerson__title {
+  font-weight: 700;
+  color: white;
+}
+.showResult .text-person {
+  color: #7f9c9f;
+}
+.showResult .content-amout__result,
+.showResult .content-totalPerson__result {
+  color: #26c0ab;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.showResult .btn-reset {
+  width: 100%;
+  height: 4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 2rem 0 0 0;
+  border-radius: 5px;
+  background-color: #26c0ab;
+  color: #00494d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.footer {
+  width: 100%;
+  margin: 1.5rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.footer__text {
+  color: #00494d;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 700;
+}
+.footer .containerFooterImg {
+  width: 10rem;
+  height: 10rem;
+  margin: -2rem 0 0 0;
+}
+.footer .containerFooterImg__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=stylle.css.map */
