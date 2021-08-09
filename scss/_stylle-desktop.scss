@@ -1,0 +1,55 @@
+@media screen and (min-width:992px){
+    main{
+        @include caja-flex(center, center, nowrap,row);
+        width: 80%;
+        height: 30rem;
+        padding: 2rem;
+    }
+    .Operations{
+        width: 50%;
+        height: 100%;
+        margin: 0 1.5rem 0 0 ;
+        .contentOperations{
+            .SelectTip{
+                margin:.5rem 0 1.5rem 0;
+                
+                &-gridContainer{
+                    grid-template-columns: 1fr 1fr 1fr;
+                    
+                    &__grid-item:hover{
+                        background-color: $LightGrayishCyan;
+                        cursor: pointer;
+                        color: $VeryDarkCyan;
+                        transition: .3s;
+                    }
+                }
+                .btn-active {
+                    background-color: $StrongCyan;
+                    color: $VeryDarkCyan;
+                }
+            }
+            
+        }
+    }
+    .showResult{
+        width: 50%;
+        height: 100%;
+        .container-textResult{
+            transform: translate(0,1.875rem);
+        }
+        .content-amout,
+        .content-totalPerson{
+            height: 3rem;
+        }
+        .content-totalPerson{
+            margin: 3rem 0 0 0;
+        }
+        .btn-reset{
+            transition: background-color .2s ease-in-out 0.2s; 
+        }
+        .btn-reset:hover{
+            background-color: $LightGrayishCyan;
+            cursor:pointer;
+        }
+    }
+}

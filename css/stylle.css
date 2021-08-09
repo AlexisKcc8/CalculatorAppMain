@@ -65,12 +65,7 @@ main {
   border-radius: 5px;
   font-size: 1.6rem;
   font-weight: 700;
-}
-.Operations .contentOperations .SelectTip-gridContainer__grid-item:hover {
-  background-color: #c5e4e7;
-  cursor: pointer;
-  color: #00494d;
-  transition: 0.3s;
+  transition: background-color 0.2s ease-in-out 0.2s;
 }
 .Operations .contentOperations .SelectTip .btn-active {
   background-color: #26c0ab;
@@ -132,7 +127,6 @@ main {
 .showResult {
   background-color: #00494d;
   width: 100%;
-  height: 18rem;
   border-radius: 1rem;
   margin: 1.5rem 0;
   padding: 2rem;
@@ -141,6 +135,9 @@ main {
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: column;
+}
+.showResult .container-textResult {
+  width: 100%;
 }
 .showResult .content-amout,
 .showResult .content-totalPerson {
@@ -165,6 +162,21 @@ main {
   color: #26c0ab;
   font-size: 2.5rem;
   font-weight: 700;
+}
+.showResult .btn-reset {
+  width: 100%;
+  height: 4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 2rem 0 0 0;
+  border-radius: 5px;
+  background-color: #26c0ab;
+  color: #00494d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 .showResult .btn-reset {
   width: 100%;
@@ -206,6 +218,63 @@ main {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 80%;
+    height: 30rem;
+    padding: 2rem;
+  }
+
+  .Operations {
+    width: 50%;
+    height: 100%;
+    margin: 0 1.5rem 0 0;
+  }
+  .Operations .contentOperations .SelectTip {
+    margin: 0.5rem 0 1.5rem 0;
+  }
+  .Operations .contentOperations .SelectTip-gridContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .Operations .contentOperations .SelectTip-gridContainer__grid-item:hover {
+    background-color: #c5e4e7;
+    cursor: pointer;
+    color: #00494d;
+    transition: 0.3s;
+  }
+  .Operations .contentOperations .SelectTip .btn-active {
+    background-color: #26c0ab;
+    color: #00494d;
+  }
+
+  .showResult {
+    width: 50%;
+    height: 100%;
+  }
+  .showResult .container-textResult {
+    transform: translate(0, 1.875rem);
+  }
+  .showResult .content-amout,
+.showResult .content-totalPerson {
+    height: 3rem;
+  }
+  .showResult .content-totalPerson {
+    margin: 3rem 0 0 0;
+  }
+  .showResult .btn-reset {
+    transition: background-color 0.2s ease-in-out 0.2s;
+  }
+  .showResult .btn-reset:hover {
+    background-color: #c5e4e7;
+    cursor: pointer;
+  }
 }
 
 /*# sourceMappingURL=stylle.css.map */
